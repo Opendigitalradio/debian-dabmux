@@ -1,0 +1,33 @@
+Jean-Daniel Langlois <> for
+the Communications Research Centre, Ottawa, Canada, 2002:
+    First version of DabMux.cpp (a.k.a. createETI.cpp)
+
+Pascal Charest <pascal [dot] charest [at] crc [dot] ca> for
+the Communications Research Centre, Ottawa, Canada, 2002-2009:
+    Principal developer and maintainer of CRC-DABMUX
+
+Jean-Michel Bouffard <jean-michel [dot] bouffard [at] crc [dot] ca> for
+the Communications Research Centre, Ottawa, Canada, 2004:
+    Minor changes for crc.c, DabMux.cpp
+
+Martin-Pierre Lussier <martin-pierre [dot] lussier [at] crc [dot] ca> for
+the Communications Research Centre, Ottawa, Canada, 2004, 2006:
+    Minor changes for PcDebug.h, bridge.c, bridge.h, dabOutput.cpp
+
+FarSite Communications Ltd.
+    All files included in lib/farsite/
+
+Robin Alexander
+    Improvements on the Web GUI
+
+Matthias P. Braendli <matthias [at] mpb [dot] li> for
+Opendigitalradio, since 2012:
+    Configuration file
+    Time encoding into necessary for SFN using ODR-DabMod and third-party modulators
+    Service linking, announcements, frequency information
+    EDI inputs and outputs
+    Improved logging (syslog) and monitoring
+    Remote Control
+    ZeroMQ ETI output and contribution inputs
+    STI/D UDP input
+

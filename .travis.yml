@@ -1,0 +1,59 @@
+language: cpp
+dist: focal
+
+jobs:
+  include:
+    # Clang on OSX
+    - env: MATRIX_EVAL="" CONF=""
+      os: osx
+      osx_image: xcode12.2
+      compiler: clang
+
+    # GCC builds on Linux
+    - env: MATRIX_EVAL="CC=gcc-10 CXX=g++-10" CONF="--disable-output-edi"
+      os: linux
+      arch: amd64
+      compiler: gcc
+      addons: &linuxaddons
+        apt:
+          packages: &packages
+            - libzmq3-dev
+            - libzmq5
+            - automake
+            - libtool
+            - libboost-all-dev
+            - libcurl4-openssl-dev
+            - g++-10
+
+    - env: MATRIX_EVAL="CC=gcc-10 CXX=g++-10" CONF="--enable-output-raw"
+      arch: amd64
+      compiler: gcc
+      addons: *linuxaddons
+
+    - env: MATRIX_EVAL="CC=gcc-10 CXX=g++-10" CONF=""
+      arch: amd64
+      compiler: gcc
+      addons: *linuxaddons
+
+    - env: MATRIX_EVAL="CC=gcc-10 CXX=g++-10" CONF=""
+      arch: arm64
+      compiler: gcc
+      addons: *linuxaddons
+
+before_install:
+  - eval "${MATRIX_EVAL}"
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+    brew update
+    brew install automake || true
+    brew install zeromq || true
+    brew install boost || true
+    brew install curl || true
+    fi
+
+script:
+  - |
+    ./bootstrap.sh
+    ./configure $CONF
+    make
+
