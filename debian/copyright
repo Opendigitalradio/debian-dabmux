@@ -1,0 +1,542 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: odr-dabmux
+Upstream-Contact: Matthias P. Braendli <matthias@mpb.li>
+Source: https://github.com/Opendigitalradio/ODR-DabMux
+
+Files:     debian/*
+Copyright: 2022 Robin Alexander <robin.alexander@netplus.ch>
+License:   GPL-3.0+
+
+Files:     man/*
+Copyright: 2022 Robin Alexander <robin.alexander@netplus.ch>
+License:   GPL-3.0+
+
+Files:     ChangeLog
+           Makefile.am
+           configure.ac
+           lib/crc.c
+           lib/crc.h
+           src/DabMultiplexer.cpp
+           src/DabMultiplexer.h
+           src/Dmb.cpp
+           src/Dmb.h
+           src/Interleaver.cpp
+           src/Interleaver.h
+           src/PcDebug.h
+           src/PrbsGenerator.cpp
+           src/PrbsGenerator.h
+           src/dabInputDmbFile.cpp
+           src/dabInputDmbFile.h
+           src/dabInputDmbUdp.cpp
+           src/dabInputDmbUdp.h
+           src/fig/FIG.cpp
+           src/fig/FIG.h
+           src/fig/FIG0.h
+           src/fig/FIG0_0.cpp
+           src/fig/FIG0_0.h
+           src/fig/FIG0_1.cpp
+           src/fig/FIG0_1.h
+           src/fig/FIG0_10.cpp
+           src/fig/FIG0_10.h
+           src/fig/FIG0_13.cpp
+           src/fig/FIG0_13.h
+           src/fig/FIG0_17.cpp
+           src/fig/FIG0_17.h
+           src/fig/FIG0_18.cpp
+           src/fig/FIG0_18.h
+           src/fig/FIG0_19.cpp
+           src/fig/FIG0_19.h
+           src/fig/FIG0_2.cpp
+           src/fig/FIG0_2.h
+           src/fig/FIG0_21.cpp
+           src/fig/FIG0_21.h
+           src/fig/FIG0_24.cpp
+           src/fig/FIG0_24.h
+           src/fig/FIG0_3.cpp
+           src/fig/FIG0_3.h
+           src/fig/FIG0_5.cpp
+           src/fig/FIG0_5.h
+           src/fig/FIG0_6.cpp
+           src/fig/FIG0_6.h
+           src/fig/FIG0_7.cpp
+           src/fig/FIG0_7.h
+           src/fig/FIG0_8.cpp
+           src/fig/FIG0_8.h
+           src/fig/FIG0_9.cpp
+           src/fig/FIG0_9.h
+           src/fig/FIG0structs.h
+           src/fig/FIG1.h
+           src/fig/FIG2.h
+           src/fig/TransitionHandler.h
+           src/input/File.cpp
+           src/input/File.h
+           src/mpeg.c
+           src/mpeg.h
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2016-2020 Matthias P. Braendli, matthias.braendli@mpb.li
+           2018 Matthias P. Braendli http://opendigitalradio.org
+           2018-2021 Matthias P. Braendli http://www.opendigitalradio.org
+           2020 Matthias P. Braendli, matthias.braendli@mpb.li Mathias Kuntze, mathias@kuntze.email
+           2022 Matthias P. Braendli, http://opendigitalradio.org
+License:   GPL-3.0+
+
+Files:     .gitignore
+           .travis.yml
+           AUTHORS
+           INSTALL.md
+           NEWS
+           README.md
+           TODO.md
+           bootstrap.sh
+           doc/README.md
+           doc/STATS.md
+           doc/TIMESTAMPS.rst
+           doc/advanced.mux
+           doc/dab_output_formats.txt
+           doc/example.mux
+           doc/remote_control.txt
+           doc/retodrs.pl
+           doc/servicelinking.mux
+           doc/show_dabmux_stats.py
+           doc/stats_dabmux_munin.py
+           doc/stats_zmq2edi_munin.py
+           doc/zmq_remote.py
+           gui/README.md
+           gui/rcparam.json
+           gui/static/intercooler-1.0.1.min.js
+           gui/static/jquery-1.10.2.min.js
+           gui/static/script.js
+           gui/static/stats.js
+           gui/static/style.css
+           lib/charset/README
+           lib/farsync/windows/fscfg.h
+           lib/farsync/windows/sdci.h
+           lib/farsync/windows/smcuser.h
+           src/TestStatsServer.cpp
+           src/test_statsserver.sh
+           src/zmq2edi/README.md
+           src/zmq2farsync/README.md
+Copyright: 2016-2022 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     gui/muxconfig.py
+           gui/muxrc.py
+           lib/ReedSolomon.cpp
+           lib/ReedSolomon.h
+           src/DabMux.cpp
+           src/MuxElements.cpp
+           src/input/Edi.cpp
+           src/input/Edi.h
+           src/input/Udp.cpp
+           src/input/Udp.h
+           src/input/inputs.h
+           src/utils.cpp
+           src/zmq2edi/EDISender.cpp
+           src/zmq2edi/EDISender.h
+           src/zmq2edi/zmq2edi.cpp
+           src/zmq2farsync/zmq2farsync.cpp
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2015-2021 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/edi/STIDecoder.cpp
+           lib/edi/STIDecoder.hpp
+           lib/edi/STIWriter.cpp
+           lib/edi/STIWriter.hpp
+           lib/edi/buffer_unpack.hpp
+           lib/edi/common.cpp
+           lib/edi/common.hpp
+Copyright: 2016-2020 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-2.0+
+
+Files:     lib/fec/char.h
+           lib/fec/decode_rs_char.c
+           lib/fec/encode_rs_char.c
+           lib/fec/fec.h
+           lib/fec/init_rs.h
+           lib/fec/init_rs_char.c
+           lib/fec/README.md
+           lib/fec/decode_rs.h
+           lib/fec/encode_rs.h
+Copyright: 2002-2004 Phil Karn, KA9Q
+License:   LGPL-2.1
+
+Files:     m4/ax_boost_asio.m4
+           m4/ax_boost_base.m4
+           m4/ax_boost_system.m4
+           m4/ax_check_compile_flag.m4
+           m4/ax_cxx_compile_stdcxx.m4
+           m4/ax_zmq.m4
+Copyright: 2008 Benjamin Kosnik <bkoz@redhat.com>
+           2008 Daniel Casimiro <dan.casimiro@gmail.com>
+           2008 Guido U. Draheim <guidod@gmx.de>
+           2008 Michael Tindal
+           2008 Pete Greenwell <pete@mu.org>
+           2008 Thomas Porschberg <thomas@randspringer.de>
+           2009 Peter Adolphs
+           2011 Maarten Bosmans <mkbosmans@gmail.com>
+           2012 Zack Weinberg <zackw@panix.com>
+           2013 Roy Stogner <roystgnr@ices.utexas.edu>
+           2014-2015 Google Inc.; contributed  Alexey Sokolov <sokolov@google.com>
+           2015 Moritz Klammler <moritz@klammler.eu>
+           2015 Paul Norman <penorman@mac.com>
+           2016 Jeroen Meijer <jjgmeijer@gmail.com>
+           2016-2018 Krzesimir Nowak <qdlacz@gmail.com>
+           2019 Enji Cooper <yaneurabeya@gmail.com>
+License:   FSFAP
+ Autogenerated files with permissive licenses.
+
+Files:     lib/Log.cpp
+           lib/Log.h
+           lib/edioutput/TagItems.cpp
+           lib/edioutput/TagItems.h
+Copyright: 2005-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2018-2019 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/charset/utf8.h
+           lib/charset/utf8/checked.h
+           lib/charset/utf8/core.h
+           lib/charset/utf8/unchecked.h
+Copyright: 2006 Nemanja Trifunovic
+License:   BSL-1.0
+ Permission is hereby granted, free of charge, to any person or organization
+ obtaining a copy of the software and accompanying documentation covered by
+ this license (the "Software") to use, reproduce, display, distribute,
+ execute, and transmit the Software, and to prepare derivative works of the
+ Software, and to permit third-parties to whom the Software is furnished to
+ do so, all subject to the following:
+ .
+ The copyright notices in the Software and this entire statement, including
+ the above license grant, this restriction and the following disclaimer,
+ must be included in all copies of the Software, in whole or in part, and
+ all derivative works of the Software, unless such copies or derivative
+ works are solely in the form of machine-executable object code generated by
+ a source language processor.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+ SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+ FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ DEALINGS IN THE SOFTWARE.
+
+Files:     lib/edioutput/EDIConfig.h
+           lib/edioutput/Transport.cpp
+           lib/edioutput/Transport.h
+Copyright: 2019-2020 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/RemoteControl.cpp
+           lib/Socket.cpp
+           lib/Socket.h
+Copyright: 2003-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2019-2020 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/zmq.hpp
+           src/zmqinput-keygen.c
+Copyright: 250-2011 bpm s.r.o.
+           2007-2009 iMatix Corporation
+           2011 Botond Ballo
+           2014 Matthias P. Braendli
+           2016-2017 ZeroMQ community
+License:   Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to
+ deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+
+Files:     lib/charset/charset.cpp
+           lib/charset/charset.h
+Copyright: 2018 Matthias P. Braendli (http://opendigitalradio.org)
+License:   GPL-3.0+
+
+Files:     src/fig/FIGCarousel.cpp
+           src/fig/FIGCarousel.h
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2020 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/edioutput/AFPacket.cpp
+           lib/edioutput/AFPacket.h
+Copyright: 2021 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/dabOutput/metadata.cpp
+           src/dabOutput/metadata.h
+Copyright: 2004-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2017 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/edioutput/PFT.cpp
+           lib/edioutput/PFT.h
+Copyright: 2021 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/input/Prbs.cpp
+           src/input/Prbs.h
+Copyright: 2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2016 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/Eti.cpp
+           src/Eti.h
+Copyright: 2005-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2012, Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/edioutput/TagPacket.cpp
+           lib/edioutput/TagPacket.h
+Copyright: 2020 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/edi/PFT.cpp
+           lib/edi/PFT.hpp
+Copyright: 2017 AVT GmbH - Fabien Vercasson
+           2021 Matthias P. Braendli matthias.braendli@mpb.li
+License:   Apache-2.0
+ http://opendigitalradio.org
+ .
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ express or implied.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+ .
+ On Debian systems, the complete text of the Apache License Version 2.0
+  can be found in `/usr/share/common-licenses/Apache-2.0'.
+
+Files:     lib/farsync/linux/farsync.h
+Copyright: 2001-2012 FarSite Communications Ltd. www.farsite.co.uk $Id: farsync.h 1471 2013-09-10 08:01:11Z kevinc
+License:   GPL-2.0+
+
+Files:     src/dabOutput/dabOutputSimul.cpp
+Copyright: 2004-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2018 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/fig/FIG1.cpp
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2019 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/fig/FIG0_14*
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2022 Matthias P. Braendli, matthias.braendli@mpb.li
+           2022 Nick Piggott, nick@piggott.eu
+License:   GPL-3.0+
+
+Files:     lib/ClockTAI.h
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2019 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/utils.h
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2020 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/dabOutput/dabOutputUdp.cpp
+Copyright: 2004-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2016 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/DabMux.h
+Copyright: 2002-2011 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2014 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/RemoteControl.h
+Copyright: 2007-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2019 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/fig/FIG2.cpp
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2019 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/dabOutput/dabOutputFifo.cpp
+Copyright: 2004-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2016 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/ConfigParser.h
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2016 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/Globals.cpp
+Copyright: 2005-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2019 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     gui/odr-dabmux-gui.py
+           gui/views/*
+Copyright: 2016 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/ClockTAI.cpp
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2019 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/dabOutput/dabOutputZMQ.cpp
+Copyright: 2004-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2014 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/ThreadsafeQueue.h
+Copyright: 2007-2011 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2018 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     LICENCE
+Copyright: 2002-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2020 Matthias P. Braendli, http://www.opendigitalradio.org
+License:   GPL-3.0+
+
+Files:     src/dabOutput/dabOutputRaw.cpp
+Copyright: 2004-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2017 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/dabOutput/dabOutput.h
+Copyright: 2004-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2017 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/MuxElements.h
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2020 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/ConfigParser.cpp
+Copyright: 2002-2012 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2020 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/ManagementServer.cpp
+Copyright: 2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2018 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/dabOutput/dabOutputTcp.cpp
+Copyright: 2004-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2018 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/dabOutput/dabOutputFile.cpp
+Copyright: 2004-2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2016 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     lib/fec/rs-common.h
+Copyright: 2004 Phil Karn, KA9Q May be used under the terms of the GNU Lesser General Public License (LGPL)
+License:   LGPL-2.1
+
+Files:     src/ManagementServer.h
+Copyright: 2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2018 Matthias P. Braendli, matthias.braendli@mpb.li
+License:   GPL-3.0+
+
+Files:     src/input/Zmq.cpp
+           src/input/Zmq.h
+Copyright: 2009 Her Majesty the Queen in Right of Canada (Communications Research Center Canada)
+           2019 Matthias P. Braendli http://www.opendigitalradio.org
+License:   GPL-3.0+
+
+Files:     m4/ax_pthread.m4
+Copyright: 2008 Steven G. Johnson <stevenj@alum.mit.edu>
+           2011 Daniel Richard G. <skunk@iSKUNK.ORG>
+           2019 Marc Stevens <marc.stevens@cwi.nl>
+License:   GPL-3.0+ with autoconf exception
+ This program is free software: you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the
+ Free Software Foundation, either version 3 of the License, or (at your
+ option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program. If not, see <https://www.gnu.org/licenses/>.
+ .
+ As a special exception, the respective Autoconf Macro's copyright owner
+ gives unlimited permission to copy, distribute and modify the configure
+ scripts that are the output of Autoconf when processing the Macro. You
+ need not follow the terms of the GNU General Public License when using
+ or distributing such scripts, even though portions of the text of the
+ Macro appear in them. The GNU General Public License (GPL) does govern
+ all other use of the material that constitutes the Autoconf Macro.
+ .
+ This special exception to the GPL applies to versions of the Autoconf
+ Macro released by the Autoconf Archive. When you make and distribute a
+ modified version of the Autoconf Macro, you may extend this special
+ exception to the GPL to apply to your modified version as well.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ Version 3 can be found in `/usr/share/common-licenses/GPL-3'.
+
+License:   GPL-3.0+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+ .
+ ODR-DabMux is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with ODR-DabMux.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ Version 3 can be found in `/usr/share/common-licenses/GPL-3'.
+
+License:   GPL-2.0+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ Version 2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: LGPL-2.1
+ On Debian systems, the full text of the GNU Lesser General Public License
+ version 2.1 can be found in the file `/usr/share/common-licenses/LGPL-2.1'.

@@ -1,0 +1,26 @@
+Source: odr-dabmux
+Section: hamradio
+Priority: optional
+Maintainer: Robin Alexander <robin.alexander@netplus.ch>
+Build-Depends: debhelper-compat (= 12),
+               libboost-system-dev,
+               libcurl4-openssl-dev,
+               libzmq3-dev
+Standards-Version: 4.6.0.1
+Homepage: https://www.opendigitalradio.org/Mmbtools
+Vcs-Browser: https://github.com/opendigitalradio/debian-dabmux
+Vcs-Git: https://github.com/opendigitalradio/debian-dabmux.git
+
+Package: odr-dabmux
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, 
+         ${shlibs:Depends},
+         libboost-system1.74.0,
+         libcurl4,
+         python3-zmq
+Description: Digital Audio Broadcasting multiplexer compliant to ETSI EN 300 401
+ ODR-DabMux implements a DAB multiplexer that combines all audio and data
+ inputs into an ETI output. It can be used off-line (i.e. not real-time)
+ to generate ETI data for later processing, or in a real-time streaming
+ scenario (e.g. in a transmitter).
