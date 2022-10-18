@@ -3,6 +3,9 @@
 ; It doesn't show all possible options. A more detailed example
 ; is available in doc/advanced.mux
 ;
+; The configuration file can also be given in JSON format, an
+; example is given in doc/example.json
+;
 ; It contains two services, one DAB and one DAB+, and also shows
 ; both the file input useful for offline processing, and the
 ; EDI input useful in a 24/7 scenario.
@@ -49,6 +52,11 @@ general {
     ; Use the RC interface 'get clocktai expiry' command to check how long
     ; your file is still valid.
     tist false
+
+    ; On startup, the timestamp is initialised to system time. If you want
+    ; to add an offset, uncomment the following line and give a number
+    ; in seconds.
+    ; tist_offset 0
 
     ; The URLs used to fetch the TAI bulletin can be overridden if needed.
     ; URLs are given as a pipe-separated list, and the default value is:
@@ -289,6 +297,11 @@ outputs {
             example_tcp {
                 protocol tcp
                 listenport 13000
+                ; (Optional) When a new client connects, it will receive a pre-roll burst of EDI data, so that it can quickly fill
+                ; its buffers. The value given is the duration of the pre-roll in seconds.
+                ; It makes sense to have a value slightly larger than tist-offset to ensure the destination will receive
+                ; data that will allow it to start transmitting immediately.
+                ;preroll-burst 2.0
             }
         }
     }
