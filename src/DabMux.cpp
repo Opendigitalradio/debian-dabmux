@@ -3,7 +3,7 @@
    2011, 2012 Her Majesty the Queen in Right of Canada (Communications
    Research Center Canada)
 
-   Copyright (C) 2019
+   Copyright (C) 2022
    Matthias P. Braendli, matthias.braendli@mpb.li
 
     http://www.opendigitalradio.org
@@ -33,6 +33,7 @@
 #include <memory>
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/info_parser.hpp>
+#include <boost/property_tree/json_parser.hpp>
 #include <cstdio>
 #include <iostream>
 #include <fstream>
@@ -200,40 +201,29 @@ int main(int argc, char *argv[])
     }
 #endif
 
-
-
-
     int returnCode = 0;
-
     ptree pt;
     std::vector<std::shared_ptr<DabOutput> > outputs;
 
     try {
+        string conf_file = "";
+
         if (argc == 2) { // Assume the only argument is a config file
-            string conf_file = argv[1];
+            conf_file = argv[1];
 
             if (conf_file == "-h") {
                 printUsage(argv[0], stdout);
                 throw MuxInitException("Nothing to do");
             }
-
-            try {
-                read_info(conf_file, pt);
-
-            }
-            catch (runtime_error &e) {
-                throw MuxInitException(e.what());
-            }
         }
         else if (argc > 1 && strncmp(argv[1], "-e", 2) == 0) { // use external config file
             try {
-
                 if (argc != 3) {
                     printUsage(argv[0], stderr);
                     throw MuxInitException();
                 }
 
-                string conf_file = argv[2];
+                conf_file = argv[2];
 
                 read_info(conf_file, pt);
             }
@@ -241,8 +231,22 @@ int main(int argc, char *argv[])
                 throw MuxInitException(e.what());
             }
         }
-        else {
+
+        if (conf_file.empty()) {
+            printUsage(argv[0], stderr);
             throw MuxInitException("No configuration file specified");
+        }
+
+        try {
+            if (stringEndsWith(conf_file, ".json")) {
+                read_json(conf_file, pt);
+            }
+            else {
+                read_info(conf_file, pt);
+            }
+        }
+        catch (runtime_error &e) {
+            throw MuxInitException(e.what());
         }
 
         /* Enable Logging to syslog conditionally */
@@ -348,6 +352,9 @@ int main(int argc, char *argv[])
                         auto dest = make_shared<edi::tcp_server_t>();
                         dest->listen_port = pt_edi_dest.second.get<unsigned int>("listenport");
                         dest->max_frames_queued = pt_edi_dest.second.get<size_t>("max_frames_queued", 500);
+                        double preroll = pt_edi_dest.second.get<double>("preroll-burst", 0.0);
+                        dest->tcp_server_preroll_buffers = ceil(preroll / 24e-3);
+
                         edi_conf.destinations.push_back(dest);
                     }
                     else {
